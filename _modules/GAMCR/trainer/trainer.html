@@ -1,0 +1,743 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GAMCR.trainer.trainer &#8212; GAMCR</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/override.css?v=dd5beb26" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/sphinx_gallery.css?v=370a08b5" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom_logo.css?v=f521e7f3" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../_static/documentation_options.js?v=29a6c3e3"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/tabs.js?v=3030b3cb"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/GAMCR/trainer/trainer';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/logo.png" class="logo__image only-light" alt="GAMCR - Home"/>
+    <script>document.write(`<img src="../../../_static/logo.png" class="logo__image only-dark" alt="GAMCR - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../installation.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../presentation.html">
+    Presentation of the project
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../documentation/GAMCR.html">
+    GAMCR package
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../tutorials/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../developer/index.html">
+    Developer
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../references.html">
+    References
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../team.html">
+    Team
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../installation.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../presentation.html">
+    Presentation of the project
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../documentation/GAMCR.html">
+    GAMCR package
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../tutorials/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../developer/index.html">
+    Developer
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../references.html">
+    References
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../team.html">
+    Team
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">GAMCR.traine...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for GAMCR.trainer.trainer</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
+<span class="kn">import</span> <span class="nn">scipy</span> <span class="k">as</span> <span class="nn">sp</span>
+<span class="kn">import</span> <span class="nn">scipy</span>
+<span class="kn">from</span> <span class="nn">copy</span> <span class="kn">import</span> <span class="n">deepcopy</span>
+<span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">..utils</span> <span class="kn">import</span> <span class="n">build_custom_matrix</span><span class="p">,</span> <span class="n">compute_smoothing_penalty_matrix</span>
+
+
+<div class="viewcode-block" id="ReLU">
+<a class="viewcode-back" href="../../../documentation/GAMCR.trainer.trainer.html#GAMCR.trainer.trainer.ReLU">[docs]</a>
+<span class="k">def</span> <span class="nf">ReLU</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">delta</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">delta</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">))</span></div>
+
+
+
+<div class="viewcode-block" id="Trainer">
+<a class="viewcode-back" href="../../../documentation/GAMCR.trainer.trainer.html#GAMCR.trainer.trainer.Trainer">[docs]</a>
+<span class="k">class</span> <span class="nc">Trainer</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A class with the algorithm to optimize the model&#39;s parameters.</span>
+
+<span class="sd">    ...</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    L : int</span>
+<span class="sd">        number of basis functions on which the transfer function is decomposed - it is also equal to the number of GAMs considered in our model</span>
+<span class="sd">    n_splines : int</span>
+<span class="sd">        number of splines used for one GAM</span>
+<span class="sd">    lam : positive float</span>
+<span class="sd">        regularization parameter related to the smoothing penalty in the GAM</span>
+
+<span class="sd">    Methods</span>
+<span class="sd">    -------</span>
+<span class="sd">    trainer(ls_X, ls_modelmat, Y, dates=None,  lr=1e-3, max_iter=200, warm_start=False,  save_folder=None, name_model=&#39;&#39;, normalization_loss=1, lam_global=0)</span>
+<span class="sd">        Optimize the model parameters, savong the optimized model along the iterations.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+        
+<div class="viewcode-block" id="Trainer.trainer">
+<a class="viewcode-back" href="../../../documentation/GAMCR.trainer.trainer.html#GAMCR.trainer.trainer.Trainer.trainer">[docs]</a>
+    <span class="k">def</span> <span class="nf">trainer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ls_X</span><span class="p">,</span> <span class="n">ls_modelmat</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">dates</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="n">lr</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">warm_start</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>  <span class="n">save_folder</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">name_model</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">normalization_loss</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">lam_global</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
+        <span class="kn">import</span> <span class="nn">scipy</span> <span class="k">as</span> <span class="nn">sp</span>
+        <span class="kn">import</span> <span class="nn">scipy</span>
+        <span class="kn">from</span> <span class="nn">copy</span> <span class="kn">import</span> <span class="n">deepcopy</span>
+        <span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
+        <span class="n">EPS</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">finfo</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span><span class="o">.</span><span class="n">eps</span>  <span class="c1"># machine epsilon</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Performs stable PIRLS iterations to estimate GAM coefficients</span>
+<span class="sd">    </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ---------</span>
+<span class="sd">        ls_X : list of size L with entries being arrays of shape (n_samples, m_features)</span>
+<span class="sd">            containing input data</span>
+<span class="sd">        ls_modelmat : list of size L</span>
+<span class="sd">            containing the matrices used in the convolution model to get the streamflow values.</span>
+<span class="sd">        Y : array-like of shape (n,)</span>
+<span class="sd">            containing target data (streamflow values)</span>
+<span class="sd">        dates : array, optional</span>
+<span class="sd">            Array of dates.</span>
+<span class="sd">        lr : float, optional</span>
+<span class="sd">            Initial value of the learning rate. Note that the learning rate will be automatically adjusted to ensure a strict descrease of the training loss.</span>
+<span class="sd">        max_iter : int, optional</span>
+<span class="sd">            Maximum number of iterations of the projected gradient descent algorithm.</span>
+<span class="sd">        warm_start : bool, optional</span>
+<span class="sd">            If True, the model parameters will be initialized to the parameters saved in the model loaded.</span>
+<span class="sd">        save_folder : str, optional</span>
+<span class="sd">            Path of the folder of the studied site where the optimized model will be saved.</span>
+<span class="sd">        name_model : str, optional</span>
+<span class="sd">            Custom name of the model that will be saved.</span>
+<span class="sd">        normalization_loss : positive float, optional</span>
+<span class="sd">            Normalization factor for the loss (should be kept to 1).</span>
+<span class="sd">        lam_global : positive float, optional</span>
+<span class="sd">            Regularization parameter for the smoothing penalty applied on the transfer functions</span>
+<span class="sd">    </span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        losses along iterations</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+    
+        <span class="n">epsilon</span> <span class="o">=</span> <span class="mf">1e-6</span>
+        
+    
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">gam</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gam</span><span class="o">.</span><span class="n">pygams</span><span class="p">):</span>
+            <span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
+                <span class="c1"># validate parameters</span>
+                <span class="n">gam</span><span class="o">.</span><span class="n">_validate_params</span><span class="p">()</span>
+            
+                <span class="c1"># validate data-dependent parameters</span>
+                <span class="n">gam</span><span class="o">.</span><span class="n">_validate_data_dep_params</span><span class="p">(</span><span class="n">ls_X</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
+            
+                <span class="c1"># set up logging</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">gam</span><span class="p">,</span> <span class="s1">&#39;logs_&#39;</span><span class="p">):</span>
+                    <span class="n">gam</span><span class="o">.</span><span class="n">logs_</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+        
+                <span class="n">gam</span><span class="o">.</span><span class="n">statistics_</span> <span class="o">=</span> <span class="p">{}</span>
+                <span class="n">gam</span><span class="o">.</span><span class="n">statistics_</span><span class="p">[</span><span class="s1">&#39;n_samples&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span>
+                <span class="n">gam</span><span class="o">.</span><span class="n">statistics_</span><span class="p">[</span><span class="s1">&#39;m_features&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ls_X</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    
+    
+        <span class="n">modelmat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span><span class="n">ls_modelmat</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">n</span><span class="p">,</span> <span class="n">m</span> <span class="o">=</span> <span class="n">modelmat</span><span class="o">.</span><span class="n">shape</span>
+    
+        <span class="c1"># initialize GLM coefficients if model is not yet fitted</span>
+        <span class="k">if</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">gam</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gam</span><span class="o">.</span><span class="n">pygams</span><span class="p">):</span>
+                <span class="k">if</span> <span class="p">(</span>
+                    <span class="ow">not</span> <span class="n">gam</span><span class="o">.</span><span class="n">_is_fitted</span>
+                    <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">gam</span><span class="o">.</span><span class="n">coef_</span><span class="p">)</span> <span class="o">!=</span> <span class="n">gam</span><span class="o">.</span><span class="n">terms</span><span class="o">.</span><span class="n">n_coefs</span>
+                    <span class="ow">or</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="n">gam</span><span class="o">.</span><span class="n">coef_</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+                <span class="p">):</span>
+                    <span class="c1"># initialize the model</span>
+                    <span class="n">gam</span><span class="o">.</span><span class="n">coef_</span> <span class="o">=</span> <span class="n">gam</span><span class="o">.</span><span class="n">_initial_estimate</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">gam</span><span class="o">.</span><span class="n">_modelmat</span><span class="p">(</span><span class="n">ls_X</span><span class="p">[</span><span class="n">k</span><span class="p">]))</span>
+    
+            <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span>
+                <span class="n">gam</span><span class="o">.</span><span class="n">coef_</span>
+            <span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">(),</span> <span class="s2">&quot;coefficients should be well-behaved, but found: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">gam</span><span class="o">.</span><span class="n">coef_</span><span class="p">)</span>
+        <span class="n">ls_P</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">l</span><span class="p">,</span> <span class="n">gam</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gam</span><span class="o">.</span><span class="n">pygams</span><span class="p">):</span>
+            <span class="n">ls_P</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">gam</span><span class="o">.</span><span class="n">_P</span><span class="p">()</span><span class="o">.</span><span class="n">A</span><span class="p">)</span>
+            <span class="c1">#ls_S.append(sp.sparse.diags(np.ones(m) * np.sqrt(EPS)))  # improve condition</span>
+        <span class="c1"># S += gam._H # add any user-chosen minumum penalty to the diagonal</span>
+        <span class="n">S</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">sparse</span><span class="o">.</span><span class="n">diags</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">EPS</span><span class="p">))</span>
+        <span class="n">P</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">block_diag</span><span class="p">(</span><span class="o">*</span><span class="n">ls_P</span><span class="p">)</span>
+
+        <span class="n">idxs_filter</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">ls_X</span><span class="p">[</span><span class="mi">0</span><span class="p">][:,</span><span class="mi">0</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">2</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gam</span><span class="o">.</span><span class="n">_modelmat</span><span class="p">(</span><span class="n">ls_X</span><span class="p">[</span><span class="mi">0</span><span class="p">])[</span><span class="n">idxs_filter</span><span class="p">,:],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">smooth_P</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">kron</span><span class="p">(</span> <span class="n">build_custom_matrix</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">L</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">a</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span> <span class="p">)</span>
+        <span class="c1">#smooth_P = np.kron( compute_smoothing_penalty_matrix(self.L, self.knots_splines), np.dot(a.reshape(-1,1), a.reshape(1,-1)) )</span>
+
+        <span class="c1"># + 0.0001*n*smooth_P</span>
+        <span class="c1"># if we dont have any constraints, then do cholesky now</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gam</span><span class="o">.</span><span class="n">pygams</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">statistics_</span><span class="p">[</span><span class="s1">&#39;m_features&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ls_X</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gam</span><span class="o">.</span><span class="n">pygams</span><span class="p">)</span>
+        <span class="c1">#E = self.gam.pygams[0]._cholesky(S + n*P + lam_global*n*smooth_P, sparse=False, verbose=self.gam.pygams[0].verbose)</span>
+        <span class="n">E</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gam</span><span class="o">.</span><span class="n">pygams</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">_cholesky</span><span class="p">(</span><span class="n">S</span> <span class="o">+</span> <span class="n">n</span><span class="o">*</span><span class="n">P</span> <span class="o">+</span> <span class="n">n</span><span class="o">*</span><span class="n">lam_global</span><span class="o">*</span><span class="n">smooth_P</span><span class="p">,</span> <span class="n">sparse</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">gam</span><span class="o">.</span><span class="n">pygams</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">verbose</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gam</span><span class="o">.</span><span class="n">pygams</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">statistics_</span><span class="p">[</span><span class="s1">&#39;m_features&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ls_X</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">min_n_m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">([</span><span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">])</span>
+        <span class="n">Dinv</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">min_n_m</span> <span class="o">+</span> <span class="n">m</span><span class="p">,</span> <span class="n">m</span><span class="p">))</span><span class="o">.</span><span class="n">T</span>
+    
+    
+        <span class="n">y</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span>  <span class="c1"># for simplicity</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">gam</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gam</span><span class="o">.</span><span class="n">pygams</span><span class="p">):</span>
+            <span class="n">lp</span> <span class="o">=</span> <span class="n">gam</span><span class="o">.</span><span class="n">_linear_predictor</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">ls_X</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
+            <span class="n">mu</span> <span class="o">=</span> <span class="n">gam</span><span class="o">.</span><span class="n">link</span><span class="o">.</span><span class="n">mu</span><span class="p">(</span><span class="n">lp</span><span class="p">,</span> <span class="n">gam</span><span class="o">.</span><span class="n">distribution</span><span class="p">)</span>
+        <span class="c1"># W = np.diag(weights)</span>
+    
+        <span class="c1"># # check for weghts == 0, nan, and update</span>
+        <span class="c1"># mask = gam._mask(W.diagonal())</span>
+        <span class="c1"># y = y[mask]  # update</span>
+        <span class="c1"># lp = lp[mask]  # update</span>
+        <span class="c1"># mu = mu[mask]  # update</span>
+        <span class="c1"># W = sp.sparse.diags(W.diagonal()[mask])  # update</span>
+    
+        <span class="c1"># PIRLS Wood pg 183</span>
+        <span class="c1">#pseudo_data = W.dot(gam._pseudo_data(y, lp, mu))</span>
+        <span class="n">pseudo_data</span> <span class="o">=</span> <span class="n">y</span>
+    
+        <span class="c1"># # log on-loop-start stats</span>
+        <span class="c1"># for k in range(self.L):</span>
+        <span class="c1">#     self.gam.pygams[k]._on_loop_start(vars(self.gam.pygams[k]).add({&#39;y&#39;:y, &#39;mu&#39;:mu, &#39;gam&#39;:self.gam.pygams[k]})</span>
+    
+        <span class="n">WB</span> <span class="o">=</span> <span class="n">modelmat</span>  <span class="c1"># common matrix product</span>
+    
+        <span class="k">if</span> <span class="ow">not</span><span class="p">(</span><span class="n">warm_start</span><span class="p">):</span>
+            <span class="n">Q</span><span class="p">,</span> <span class="n">R</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">qr</span><span class="p">(</span><span class="n">WB</span><span class="p">)</span> 
+        
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="n">Q</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="n">R</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">():</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="s1">&#39;QR decomposition produced NaN or Inf. &#39;</span> <span class="s1">&#39;Check X data.&#39;</span>
+                <span class="p">)</span>
+        
+            <span class="c1"># need to recompute the number of singular values</span>
+            <span class="n">min_n_m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">([</span><span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">])</span>
+            <span class="n">Dinv</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">m</span><span class="p">,</span> <span class="n">min_n_m</span><span class="p">))</span>
+        
+            <span class="c1"># SVD</span>
+            <span class="n">U</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">Vt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">svd</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">R</span><span class="p">,</span> <span class="n">E</span><span class="p">]))</span>
+        
+            <span class="c1"># mask out small singular values</span>
+            <span class="c1"># svd_mask = d &lt;= (d.max() * np.sqrt(EPS))</span>
+        
+            <span class="n">np</span><span class="o">.</span><span class="n">fill_diagonal</span><span class="p">(</span><span class="n">Dinv</span><span class="p">,</span> <span class="n">d</span><span class="o">**-</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># invert the singular values</span>
+            <span class="n">U1</span> <span class="o">=</span> <span class="n">U</span><span class="p">[:</span><span class="n">min_n_m</span><span class="p">,</span> <span class="p">:</span><span class="n">min_n_m</span><span class="p">]</span>  <span class="c1"># keep only top corner of U</span>
+        
+            <span class="c1"># update coefficients</span>
+            <span class="n">B</span> <span class="o">=</span> <span class="n">Vt</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">Dinv</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">U1</span><span class="o">.</span><span class="n">T</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">Q</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+
+
+        <span class="n">normalization_loss</span> <span class="o">=</span> <span class="n">n</span>
+        <span class="n">Q</span> <span class="o">=</span> <span class="p">(</span><span class="n">WB</span><span class="o">.</span><span class="n">T</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">WB</span><span class="p">)</span> <span class="o">/</span> <span class="n">normalization_loss</span> <span class="o">+</span> <span class="n">S</span> <span class="o">+</span> <span class="n">P</span> <span class="o">+</span>  <span class="n">lam_global</span><span class="o">*</span><span class="n">smooth_P</span>
+        <span class="n">q</span> <span class="o">=</span> <span class="p">(</span><span class="n">WB</span><span class="o">.</span><span class="n">T</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">pseudo_data</span><span class="p">)</span> <span class="o">/</span> <span class="n">normalization_loss</span> 
+        <span class="n">loss</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">ite</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">max_iter</span><span class="p">)):</span>
+            
+            <span class="k">if</span> <span class="n">ite</span><span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">coef_old</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">coef_new</span><span class="p">)</span>
+            
+            <span class="k">if</span> <span class="n">ite</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+                <span class="k">if</span> <span class="ow">not</span><span class="p">(</span><span class="n">warm_start</span><span class="p">):</span>
+                    <span class="n">coef_new</span> <span class="o">=</span> <span class="n">B</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">pseudo_data</span><span class="p">)</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+                    <span class="n">coef_new</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">coef_new</span><span class="p">)</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+                    <span class="n">coef_new</span> <span class="o">=</span> <span class="n">ReLU</span><span class="p">(</span><span class="n">coef_new</span><span class="p">,</span> <span class="n">delta</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">coef_new</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gam</span><span class="o">.</span><span class="n">get_coeffs</span><span class="p">()</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+                    
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1">#grad = ( (WB.T).dot(WB)+S+P ).dot(coef_new) - (WB.T).dot(pseudo_data) # - (1/t) /(coef_new+epsilon)</span>
+                <span class="n">grad</span> <span class="o">=</span> <span class="p">(</span> <span class="n">Q</span> <span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">coef_new</span><span class="p">)</span> <span class="o">-</span> <span class="n">q</span> <span class="c1"># - (1/t) /(coef_new+epsilon)</span>
+                <span class="n">coef_new</span> <span class="o">=</span> <span class="n">coef_new</span> <span class="o">-</span> <span class="n">lr</span> <span class="o">*</span> <span class="n">grad</span> 
+                <span class="n">coef_new</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">coef_new</span><span class="p">)</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+                <span class="n">coef_new</span> <span class="o">=</span> <span class="n">ReLU</span><span class="p">(</span><span class="n">coef_new</span><span class="p">,</span> <span class="n">delta</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+                
+            <span class="n">diff</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">for</span> <span class="n">gam</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">gam</span><span class="o">.</span><span class="n">pygams</span><span class="p">:</span>
+                <span class="n">diff</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">gam</span><span class="o">.</span><span class="n">coef_</span> <span class="o">-</span> <span class="n">coef_new</span><span class="p">[</span><span class="n">count</span><span class="p">:</span><span class="n">count</span><span class="o">+</span><span class="nb">len</span><span class="p">(</span><span class="n">gam</span><span class="o">.</span><span class="n">coef_</span><span class="p">)])</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">coef_new</span><span class="p">[</span><span class="n">count</span><span class="p">:</span><span class="n">count</span><span class="o">+</span><span class="nb">len</span><span class="p">(</span><span class="n">gam</span><span class="o">.</span><span class="n">coef_</span><span class="p">)])</span><span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gam</span><span class="o">.</span><span class="n">pygams</span><span class="p">)</span>
+                <span class="n">gam</span><span class="o">.</span><span class="n">coef_</span> <span class="o">=</span> <span class="n">coef_new</span><span class="p">[</span><span class="n">count</span><span class="p">:</span><span class="n">count</span><span class="o">+</span><span class="nb">len</span><span class="p">(</span><span class="n">gam</span><span class="o">.</span><span class="n">coef_</span><span class="p">)]</span>  <span class="c1"># update</span>
+                <span class="n">count</span> <span class="o">=</span> <span class="n">count</span><span class="o">+</span><span class="nb">len</span><span class="p">(</span><span class="n">gam</span><span class="o">.</span><span class="n">coef_</span><span class="p">)</span> 
+    
+                <span class="c1"># log on-loop-end stats</span>
+                <span class="n">gam</span><span class="o">.</span><span class="n">_on_loop_end</span><span class="p">(</span><span class="nb">vars</span><span class="p">())</span>
+    
+    
+            <span class="n">Qhat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+            <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">gam</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gam</span><span class="o">.</span><span class="n">pygams</span><span class="p">):</span>
+                <span class="n">Qhat</span> <span class="o">+=</span> <span class="n">ls_modelmat</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">@</span> <span class="n">gam</span><span class="o">.</span><span class="n">coef_</span>
+    
+            <span class="n">error</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">Qhat</span><span class="o">-</span><span class="n">y</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">ite</span><span class="o">!=</span><span class="mi">0</span> <span class="ow">and</span> <span class="p">(</span><span class="n">error</span><span class="o">&gt;</span><span class="n">loss</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]):</span>
+                <span class="n">lr</span> <span class="o">=</span> <span class="n">lr</span> <span class="o">/</span> <span class="mi">4</span>
+                <span class="n">coef_new</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">coef_old</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">loss</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
+    
+            <span class="k">if</span> <span class="n">ite</span><span class="o">%</span><span class="mi">100</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Error: &#39;</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Learning rate: &#39;</span><span class="p">,</span> <span class="n">lr</span><span class="p">)</span>
+                <span class="k">if</span> <span class="ow">not</span><span class="p">(</span><span class="n">save_folder</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">):</span>
+                    <span class="n">gamcoeffs</span> <span class="o">=</span> <span class="p">[]</span>
+                    <span class="k">for</span> <span class="n">gam</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">gam</span><span class="o">.</span><span class="n">pygams</span><span class="p">:</span>
+                        <span class="n">gamcoeffs</span> <span class="o">+=</span> <span class="nb">list</span><span class="p">(</span><span class="n">gam</span><span class="o">.</span><span class="n">coef_</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">save_model_parameters</span><span class="p">(</span><span class="n">save_folder</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name_model</span><span class="p">,</span> <span class="n">add_dic</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;dates_training&#39;</span><span class="p">:</span> <span class="n">dates</span><span class="p">})</span>
+                    <span class="n">np</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">save_folder</span><span class="p">,</span> <span class="s1">&#39;gamcoeffs.npy&#39;</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">gamcoeffs</span><span class="p">))</span>
+                    <span class="n">np</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">save_folder</span><span class="p">,</span> <span class="s1">&#39;losses.npy&#39;</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">loss</span><span class="p">))</span>
+    
+    
+    
+        <span class="k">if</span> <span class="n">diff</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">gam</span><span class="o">.</span><span class="n">pygams</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">tol</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">loss</span>
+    
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;did not converge&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">loss</span></div>
+</div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Q.Duchemin, M.G.Zanoni, G.Obozinski, J.Kirchner and P.Benettin.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

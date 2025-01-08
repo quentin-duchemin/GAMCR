@@ -1,0 +1,952 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GAMCR.dataset.dataset &#8212; GAMCR</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/override.css?v=dd5beb26" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/sphinx_gallery.css?v=370a08b5" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom_logo.css?v=f521e7f3" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../_static/documentation_options.js?v=29a6c3e3"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/tabs.js?v=3030b3cb"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/GAMCR/dataset/dataset';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/logo.png" class="logo__image only-light" alt="GAMCR - Home"/>
+    <script>document.write(`<img src="../../../_static/logo.png" class="logo__image only-dark" alt="GAMCR - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../installation.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../presentation.html">
+    Presentation of the project
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../documentation/GAMCR.html">
+    GAMCR package
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../tutorials/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../developer/index.html">
+    Developer
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../references.html">
+    References
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../team.html">
+    Team
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../installation.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../presentation.html">
+    Presentation of the project
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../documentation/GAMCR.html">
+    GAMCR package
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../tutorials/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../developer/index.html">
+    Developer
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../references.html">
+    References
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../team.html">
+    Team
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">GAMCR.datase...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for GAMCR.dataset.dataset</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy.interpolate</span> <span class="kn">import</span> <span class="n">BSpline</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pickle</span>
+<span class="kn">from</span> <span class="nn">.datagam</span> <span class="kn">import</span> <span class="n">DataGAM</span>
+<span class="kn">from</span> <span class="nn">pygam</span> <span class="kn">import</span> <span class="n">LinearGAM</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">f</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
+<span class="kn">import</span> <span class="nn">scipy</span> <span class="k">as</span> <span class="nn">sp</span>
+<span class="kn">import</span> <span class="nn">scipy</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">copy</span> <span class="kn">import</span> <span class="n">deepcopy</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<div class="viewcode-block" id="Dataset">
+<a class="viewcode-back" href="../../../documentation/GAMCR.dataset.dataset.html#GAMCR.dataset.dataset.Dataset">[docs]</a>
+<span class="k">class</span> <span class="nc">Dataset</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A class used to preprocess, load and save data and models</span>
+
+<span class="sd">    ...</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    max_lag : int</span>
+<span class="sd">        maximum lag time consider for the transfer functions</span>
+<span class="sd">    features : dic</span>
+<span class="sd">        dictionary of the different features used in the model</span>
+<span class="sd">    n_splines : int</span>
+<span class="sd">        number of splines considered for a GAM</span>
+<span class="sd">    lam : positive float</span>
+<span class="sd">        regularization parameter related to the smoothing penalty in the GAM</span>
+
+<span class="sd">    Methods</span>
+<span class="sd">    -------</span>
+<span class="sd">    load_model(path_model, lam=None)</span>
+<span class="sd">        Load the model saved in the file with path: path_model</span>
+<span class="sd">    save_model_parameters(save_folder, name=&#39;&#39;, add_dic={})</span>
+<span class="sd">        Save the model parameters</span>
+<span class="sd">    save_batch_common_GAM(allGISID, save_folder, ntest=0, nstart=0, nfiles=40)</span>
+<span class="sd">        Preprocess and save the data. It makes sure to use the same knots for the GAMs for the different sites.</span>
+<span class="sd">    save_batch( save_folder, datafile, nstart=0, nfiles=100)</span>
+<span class="sd">        Preprocess and save the data.</span>
+<span class="sd">    get_fluxes(datafile, nstart=0, ntest=0, size_time_window=None)</span>
+<span class="sd">        Load the data and get the PET, precipitation, dates and streamflow time series. This method is called by the &#39;save_batch&#39; type methods.</span>
+<span class="sd">    get_design(pet, x, y, dates)</span>
+<span class="sd">        Compute the design matrix of the GAMs. This method is called by the &#39;save_batch&#39; type methods.</span>
+<span class="sd">    get_GAMdesign(X, J)</span>
+<span class="sd">        Compute the matrix that is used in the convolution to get the streamflow values.</span>
+<span class="sd">    load_data(save_folder, max_files=100, test_mode=False)</span>
+<span class="sd">        Load the data that has been already proprecessed and saved using one of the &#39;save_batch&#39; type methods.</span>
+<span class="sd">    compute_spline_basis(show_splines = False)</span>
+<span class="sd">        Compute the basis functions (B-splines) one which we decompose the transfer functions.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_lag</span><span class="o">=</span><span class="mi">24</span><span class="o">*</span><span class="mi">30</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="n">features</span><span class="o">=</span><span class="p">{},</span> <span class="n">n_splines</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>  <span class="n">lam</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">m</span> <span class="o">=</span> <span class="n">max_lag</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">compute_spline_basis</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">L</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">basis_splines</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">if</span> <span class="ow">not</span><span class="p">(</span><span class="s1">&#39;p&#39;</span> <span class="ow">in</span> <span class="n">features</span><span class="p">):</span>
+            <span class="n">features</span><span class="p">[</span><span class="s1">&#39;p&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">24</span><span class="o">*</span><span class="mi">15</span><span class="p">,</span><span class="mi">24</span><span class="o">*</span><span class="mi">30</span><span class="p">,</span><span class="mi">24</span><span class="o">*</span><span class="mi">30</span><span class="o">*</span><span class="mi">6</span><span class="p">,</span><span class="mi">24</span><span class="o">*</span><span class="mi">30</span><span class="o">*</span><span class="mi">12</span><span class="p">,</span><span class="mi">24</span><span class="o">*</span><span class="mi">30</span><span class="o">*</span><span class="mi">16</span><span class="p">]</span>
+        <span class="k">if</span> <span class="ow">not</span><span class="p">(</span><span class="s1">&#39;pet&#39;</span> <span class="ow">in</span> <span class="n">features</span><span class="p">):</span>
+            <span class="n">features</span><span class="p">[</span><span class="s1">&#39;pet&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">24</span><span class="o">*</span><span class="mi">15</span><span class="p">,</span><span class="mi">24</span><span class="o">*</span><span class="mi">30</span><span class="p">,</span><span class="mi">24</span><span class="o">*</span><span class="mi">30</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span><span class="mi">24</span><span class="o">*</span><span class="mi">30</span><span class="o">*</span><span class="mi">6</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">features</span> <span class="o">=</span> <span class="n">features</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">init</span> <span class="o">=</span> <span class="nb">max</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="s1">&#39;p&#39;</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="s1">&#39;pet&#39;</span><span class="p">])])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gam</span> <span class="o">=</span> <span class="n">DataGAM</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">L</span><span class="p">,</span> <span class="n">n_splines</span><span class="o">=</span><span class="n">n_splines</span><span class="p">,</span> <span class="n">lam</span><span class="o">=</span><span class="n">lam</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Dataset.load_model">
+<a class="viewcode-back" href="../../../documentation/GAMCR.dataset.dataset.html#GAMCR.dataset.dataset.Dataset.load_model">[docs]</a>
+    <span class="k">def</span> <span class="nf">load_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path_model</span><span class="p">,</span> <span class="n">lam</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Load the model saved in the file with path: path_model</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        path_model : str</span>
+<span class="sd">            The location of the file where the model has been saved</span>
+<span class="sd">        lam : positive float, optional</span>
+<span class="sd">            Regularization parameter for the smoothing penalty used when fitting the GAM</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path_model</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
+            <span class="n">params</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">handle</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">lam</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">lam</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="s1">&#39;gam&#39;</span><span class="p">][</span><span class="s1">&#39;lam&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">m</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="s1">&#39;m&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">compute_spline_basis</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">L</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">basis_splines</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">init</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="s1">&#39;init&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">features</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">feature_names</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="s1">&#39;feature_names&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gam</span> <span class="o">=</span> <span class="n">DataGAM</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">L</span><span class="p">,</span> <span class="n">n_splines</span><span class="o">=</span><span class="n">params</span><span class="p">[</span><span class="s1">&#39;gam&#39;</span><span class="p">][</span><span class="s1">&#39;n_splines&#39;</span><span class="p">],</span> <span class="n">lam</span><span class="o">=</span><span class="n">lam</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gam</span><span class="o">.</span><span class="n">init_gam_from_knots</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="s1">&#39;gam&#39;</span><span class="p">][</span><span class="s1">&#39;edge_knots_&#39;</span><span class="p">],</span> <span class="n">params</span><span class="p">[</span><span class="s1">&#39;gam&#39;</span><span class="p">][</span><span class="s1">&#39;m_features&#39;</span><span class="p">],</span> <span class="n">coeffs</span><span class="o">=</span><span class="n">params</span><span class="p">[</span><span class="s1">&#39;gam&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;coeffs&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span></div>
+
+        
+<div class="viewcode-block" id="Dataset.save_model_parameters">
+<a class="viewcode-back" href="../../../documentation/GAMCR.dataset.dataset.html#GAMCR.dataset.dataset.Dataset.save_model_parameters">[docs]</a>
+    <span class="k">def</span> <span class="nf">save_model_parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">save_folder</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">add_dic</span><span class="o">=</span><span class="p">{}):</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="n">add_dic</span>
+        <span class="n">params</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;m&#39;</span><span class="p">:</span><span class="bp">self</span><span class="o">.</span><span class="n">m</span><span class="p">,</span>
+                  <span class="s1">&#39;init&#39;</span><span class="p">:</span><span class="bp">self</span><span class="o">.</span><span class="n">init</span><span class="p">,</span>
+                  <span class="s1">&#39;features&#39;</span><span class="p">:</span><span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">,</span>
+                  <span class="s1">&#39;feature_names&#39;</span><span class="p">:</span><span class="bp">self</span><span class="o">.</span><span class="n">feature_names</span><span class="p">,</span>
+                  <span class="s1">&#39;gam&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">gam</span><span class="o">.</span><span class="n">get_params</span><span class="p">()</span>
+                 <span class="p">})</span>
+        <span class="k">if</span> <span class="n">name</span><span class="o">==</span><span class="s1">&#39;&#39;</span><span class="p">:</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{0}</span><span class="s1">/params.pkl&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">save_folder</span><span class="p">),</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
+                <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="n">handle</span><span class="p">,</span> <span class="n">protocol</span><span class="o">=</span><span class="n">pickle</span><span class="o">.</span><span class="n">HIGHEST_PROTOCOL</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{0}</span><span class="s1">/</span><span class="si">{1}</span><span class="s1">.pkl&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">save_folder</span><span class="p">,</span> <span class="n">name</span><span class="p">),</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
+                <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="n">handle</span><span class="p">,</span> <span class="n">protocol</span><span class="o">=</span><span class="n">pickle</span><span class="o">.</span><span class="n">HIGHEST_PROTOCOL</span><span class="p">)</span></div>
+
+                
+<div class="viewcode-block" id="Dataset.save_batch_common_GAM">
+<a class="viewcode-back" href="../../../documentation/GAMCR.dataset.dataset.html#GAMCR.dataset.dataset.Dataset.save_batch_common_GAM">[docs]</a>
+    <span class="k">def</span> <span class="nf">save_batch_common_GAM</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">allGISID</span><span class="p">,</span> <span class="n">save_folder</span><span class="p">,</span> <span class="n">ntest</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">nstart</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">nfiles</span><span class="o">=</span><span class="mi">40</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Preprocess and save the data for all sites in allGISID.</span>
+<span class="sd">        </span>
+<span class="sd">        It makes sure to use the same knots for the GAMs for the different sites. This was needed in our paper when trying to fit a model predicting model coefficients from catchment&#39;s features. Otherwise, coefficients learned at different sites would not correspond to the same quantities.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        allGISID : list</span>
+<span class="sd">            List of the names of the sites</span>
+<span class="sd">        save_folder : str</span>
+<span class="sd">            Path where we can find a folder &#39;{site}&#39; for all &#39;{site}&#39; in allGISID. In this folder, the .txt file with the data at the corresponding site should be saved.</span>
+<span class="sd">        ntest : int, optional</span>
+<span class="sd">            Number of more recent time points that should be discarded.</span>
+<span class="sd">        nstart : int, optional</span>
+<span class="sd">            Number of older time points that should be discarded.</span>
+<span class="sd">        nfiles : int, optional</span>
+<span class="sd">            The preprocessed data will be splitted and saved in different files (to potentially speed up the loading process of the data if only some fraction of the total dataset is needed). This integer specifies the number of files used to split the data.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">init</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">init</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">m</span>
+        <span class="n">common_edge_knots</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">for</span> <span class="n">GISID</span> <span class="ow">in</span> <span class="n">allGISID</span><span class="p">:</span>
+            <span class="kn">import</span> <span class="nn">os</span>
+            <span class="n">path_root</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">save_folder</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">GISID</span><span class="p">))</span>
+            <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path_root</span><span class="p">,</span> <span class="s1">&#39;data/&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+                <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+            <span class="n">pathfile</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path_root</span><span class="p">,</span> <span class="s1">&#39;data_</span><span class="si">{0}</span><span class="s1">.txt&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">GISID</span><span class="p">))</span>
+            <span class="n">pet_train</span><span class="p">,</span> <span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">dates_train</span><span class="p">,</span> <span class="n">timeyear_train</span><span class="p">,</span> <span class="n">pet_test</span><span class="p">,</span> <span class="n">x_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">dates_test</span><span class="p">,</span> <span class="n">timeyear_test</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_fluxes</span><span class="p">(</span><span class="n">pathfile</span><span class="p">,</span> <span class="n">ntest</span><span class="o">=</span><span class="n">ntest</span><span class="p">,</span> <span class="n">nstart</span><span class="o">=</span><span class="n">nstart</span><span class="p">)</span>
+            
+            <span class="n">X</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_design</span><span class="p">(</span><span class="n">pet_train</span><span class="p">,</span> <span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">timeyear_train</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">gam</span><span class="o">.</span><span class="n">init_gam_from_design</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">common_edge_knots</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">common_edge_knots</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gam</span><span class="o">.</span><span class="n">edge_knots_</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">common_edge_knots</span><span class="p">):</span>
+                    <span class="n">common_edge_knots</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="nb">min</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">gam</span><span class="o">.</span><span class="n">edge_knots_</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span> 
+                    <span class="n">common_edge_knots</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nb">max</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">gam</span><span class="o">.</span><span class="n">edge_knots_</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">]])</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">save_model_parameters</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;params_local&#39;</span><span class="p">)</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="s1">&#39;X_temp.npy&#39;</span><span class="p">),</span> <span class="n">X</span><span class="p">)</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="s1">&#39;y_temp.npy&#39;</span><span class="p">),</span> <span class="n">y_train</span><span class="p">)</span>
+            <span class="c1">#np.save(save_folder+&#39;indexes_temp.npy&#39;.format(l), np.array([i for i in range()]))</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="s1">&#39;timeyear_temp.npy&#39;</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">timeyear_train</span><span class="p">))</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="s1">&#39;dates_temp.npy&#39;</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">dates_train</span><span class="p">))</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="s1">&#39;J_temp.npy&#39;</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">x_train</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gam</span><span class="o">.</span><span class="n">init_gam_from_knots</span><span class="p">(</span><span class="n">common_edge_knots</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">gam</span><span class="o">.</span><span class="n">m_features</span><span class="p">)</span>
+        
+        <span class="k">for</span> <span class="n">GISID</span> <span class="ow">in</span> <span class="n">allGISID</span><span class="p">:</span>
+            <span class="n">path_root</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">save_folder</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">GISID</span><span class="p">))</span>
+            <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path_root</span><span class="p">,</span> <span class="s1">&#39;data/&#39;</span><span class="p">)</span>
+            <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="s1">&#39;X_temp.npy&#39;</span><span class="p">))</span>
+            <span class="n">J</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="s1">&#39;J_temp.npy&#39;</span><span class="p">))</span>
+            <span class="n">timeyear</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="s1">&#39;timeyear_temp.npy&#39;</span><span class="p">))</span>
+            <span class="n">dates</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="s1">&#39;dates_temp.npy&#39;</span><span class="p">),</span> <span class="n">allow_pickle</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="s1">&#39;y_temp.npy&#39;</span><span class="p">))</span>
+            <span class="c1"># os.remove(path+&#39;X_temp.npy&#39;)</span>
+            <span class="c1"># os.remove(path+&#39;timeyear_temp.npy&#39;)</span>
+            <span class="c1"># os.remove(path+&#39;dates_temp.npy&#39;)</span>
+            <span class="c1"># os.remove(path+&#39;y_temp.npy&#39;)</span>
+            <span class="c1"># os.remove(path+&#39;J_temp.npy&#39;)</span>
+
+            <span class="n">matJ</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_GAMdesign</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">J</span><span class="p">)</span>
+            <span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">m</span><span class="o">+</span><span class="n">init</span><span class="p">:,:]</span>
+            <span class="n">Y</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">m</span><span class="o">+</span><span class="n">init</span><span class="p">:]</span>
+            <span class="n">dates</span> <span class="o">=</span> <span class="n">dates</span><span class="p">[</span><span class="n">m</span><span class="o">+</span><span class="n">init</span><span class="p">:]</span>
+            <span class="n">timeyear</span> <span class="o">=</span> <span class="n">timeyear</span><span class="p">[</span><span class="n">m</span><span class="o">+</span><span class="n">init</span><span class="p">:]</span>
+            <span class="n">nt</span> <span class="o">=</span> <span class="n">matJ</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nfiles</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+                <span class="n">low</span><span class="p">,</span> <span class="n">up</span> <span class="o">=</span> <span class="n">l</span><span class="o">*</span><span class="p">(</span><span class="n">nt</span><span class="o">//</span><span class="n">nfiles</span><span class="p">),</span> <span class="p">(</span><span class="n">l</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">nt</span><span class="o">//</span><span class="n">nfiles</span><span class="p">)</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">l</span><span class="o">==</span><span class="p">(</span><span class="n">nfiles</span><span class="o">-</span><span class="mi">2</span><span class="p">)):</span>
+                    <span class="n">up</span> <span class="o">=</span> <span class="n">nt</span>
+                <span class="n">np</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="s1">&#39;matJ_</span><span class="si">{0}</span><span class="s1">.npy&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">l</span><span class="p">)),</span> <span class="n">matJ</span><span class="p">[</span><span class="n">low</span><span class="p">:</span><span class="n">up</span><span class="p">,:,:])</span>
+                <span class="n">np</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="s1">&#39;X_</span><span class="si">{0}</span><span class="s1">.npy&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">l</span><span class="p">)),</span> <span class="n">X</span><span class="p">[</span><span class="n">low</span><span class="p">:</span><span class="n">up</span><span class="p">,:])</span>
+                <span class="n">np</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="s1">&#39;y_</span><span class="si">{0}</span><span class="s1">.npy&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">l</span><span class="p">)),</span> <span class="n">Y</span><span class="p">[</span><span class="n">low</span><span class="p">:</span><span class="n">up</span><span class="p">])</span>
+                <span class="n">np</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="s1">&#39;indexes_</span><span class="si">{0}</span><span class="s1">.npy&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">l</span><span class="p">)),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">low</span><span class="p">,</span><span class="n">up</span><span class="p">)]))</span>
+                <span class="n">np</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="s1">&#39;timeyear_</span><span class="si">{0}</span><span class="s1">.npy&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">l</span><span class="p">)),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">timeyear</span><span class="p">[</span><span class="n">low</span><span class="p">:</span><span class="n">up</span><span class="p">]))</span>
+                <span class="n">np</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="s1">&#39;dates_</span><span class="si">{0}</span><span class="s1">.npy&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">l</span><span class="p">)),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">dates</span><span class="p">[</span><span class="n">low</span><span class="p">:</span><span class="n">up</span><span class="p">]))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">save_model_parameters</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Dataset.save_batch">
+<a class="viewcode-back" href="../../../documentation/GAMCR.dataset.dataset.html#GAMCR.dataset.dataset.Dataset.save_batch">[docs]</a>
+    <span class="k">def</span> <span class="nf">save_batch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">save_folder</span><span class="p">,</span> <span class="n">datafile</span><span class="p">,</span> <span class="n">nstart</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">nfiles</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Preprocess and save the data for all sites in allGISID.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        save_folder : str</span>
+<span class="sd">            Path where we can find a folder &#39;{site}&#39; for the site under study. In this folder, the .txt file with the data at the corresponding site should be saved.</span>
+<span class="sd">        nstart : int, optional</span>
+<span class="sd">            Number of older time points that should be discarded.</span>
+<span class="sd">        nfiles : int, optional</span>
+<span class="sd">            The preprocessed data will be splitted and saved in different files (to potentially speed up the loading process of the data if only some fraction of the total dataset is needed). This integer specifies the number of files used to split the data.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">nfiles</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">init</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">init</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">m</span>
+        <span class="kn">import</span> <span class="nn">os</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">save_folder</span><span class="p">):</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">save_folder</span><span class="p">)</span>
+        <span class="n">pet_train</span><span class="p">,</span> <span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">dates_train</span><span class="p">,</span> <span class="n">timeyear_train</span><span class="p">,</span> <span class="n">pet_test</span><span class="p">,</span> <span class="n">x_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">dates_test</span><span class="p">,</span> <span class="n">timeyear_test</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_fluxes</span><span class="p">(</span><span class="n">datafile</span><span class="p">,</span> <span class="n">ntest</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">nstart</span><span class="o">=</span><span class="n">nstart</span><span class="p">)</span>
+        
+        <span class="n">X</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_design</span><span class="p">(</span><span class="n">pet_train</span><span class="p">,</span> <span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">timeyear_train</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gam</span><span class="o">.</span><span class="n">init_gam_from_design</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+        <span class="n">matJ</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_GAMdesign</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">x_train</span><span class="p">)</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">m</span><span class="o">+</span><span class="n">init</span><span class="p">:,:]</span>
+        <span class="n">Y</span> <span class="o">=</span> <span class="n">y_train</span><span class="p">[</span><span class="n">m</span><span class="o">+</span><span class="n">init</span><span class="p">:]</span>
+        <span class="n">dates</span> <span class="o">=</span> <span class="n">dates_train</span><span class="p">[</span><span class="n">m</span><span class="o">+</span><span class="n">init</span><span class="p">:]</span>
+        <span class="n">timeyear</span> <span class="o">=</span> <span class="n">timeyear_train</span><span class="p">[</span><span class="n">m</span><span class="o">+</span><span class="n">init</span><span class="p">:]</span>
+        <span class="n">nt</span> <span class="o">=</span> <span class="n">matJ</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nfiles</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+            <span class="n">low</span><span class="p">,</span> <span class="n">up</span> <span class="o">=</span> <span class="n">l</span><span class="o">*</span><span class="p">(</span><span class="n">nt</span><span class="o">//</span><span class="n">nfiles</span><span class="p">),</span> <span class="p">(</span><span class="n">l</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">nt</span><span class="o">//</span><span class="n">nfiles</span><span class="p">)</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">l</span><span class="o">==</span><span class="p">(</span><span class="n">nfiles</span><span class="o">-</span><span class="mi">2</span><span class="p">)):</span>
+                <span class="n">up</span> <span class="o">=</span> <span class="n">nt</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">save_folder</span><span class="p">,</span><span class="s1">&#39;matJ_</span><span class="si">{0}</span><span class="s1">.npy&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">l</span><span class="p">)),</span> <span class="n">matJ</span><span class="p">[</span><span class="n">low</span><span class="p">:</span><span class="n">up</span><span class="p">,:,:])</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">save_folder</span><span class="p">,</span><span class="s1">&#39;X_</span><span class="si">{0}</span><span class="s1">.npy&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">l</span><span class="p">)),</span> <span class="n">X</span><span class="p">[</span><span class="n">low</span><span class="p">:</span><span class="n">up</span><span class="p">,:])</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">save_folder</span><span class="p">,</span><span class="s1">&#39;y_</span><span class="si">{0}</span><span class="s1">.npy&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">l</span><span class="p">)),</span> <span class="n">Y</span><span class="p">[</span><span class="n">low</span><span class="p">:</span><span class="n">up</span><span class="p">])</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">save_folder</span><span class="p">,</span><span class="s1">&#39;indexes_</span><span class="si">{0}</span><span class="s1">.npy&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">l</span><span class="p">)),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">low</span><span class="p">,</span><span class="n">up</span><span class="p">)]))</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">save_folder</span><span class="p">,</span><span class="s1">&#39;timeyear_</span><span class="si">{0}</span><span class="s1">.npy&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">l</span><span class="p">)),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">timeyear</span><span class="p">[</span><span class="n">low</span><span class="p">:</span><span class="n">up</span><span class="p">]))</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">save_folder</span><span class="p">,</span><span class="s1">&#39;dates_</span><span class="si">{0}</span><span class="s1">.npy&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">l</span><span class="p">)),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">dates</span><span class="p">[</span><span class="n">low</span><span class="p">:</span><span class="n">up</span><span class="p">]))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">save_model_parameters</span><span class="p">(</span><span class="n">save_folder</span><span class="p">)</span></div>
+
+    
+<div class="viewcode-block" id="Dataset.get_fluxes">
+<a class="viewcode-back" href="../../../documentation/GAMCR.dataset.dataset.html#GAMCR.dataset.dataset.Dataset.get_fluxes">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_fluxes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">datafile</span><span class="p">,</span> <span class="n">nstart</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ntest</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">size_time_window</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Load the data and get the PET, precipitation, dates and streamflow time series. This method is called by the &#39;save_batch&#39; type methods.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        datafile : str</span>
+<span class="sd">            Path of the .txt file with the data at the corresponding site.</span>
+<span class="sd">        nstart : int, optional</span>
+<span class="sd">            Number of older time points that should be discarded.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">datafile</span><span class="p">)</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;p&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;q&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+        <span class="n">pet</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;pet&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">m</span>
+        <span class="n">init</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">init</span>
+        <span class="k">if</span> <span class="n">size_time_window</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">size_time_window</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+        <span class="n">ntrain</span> <span class="o">=</span> <span class="n">init</span><span class="o">+</span><span class="n">size_time_window</span>
+        <span class="n">dates</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+        <span class="n">timeyear</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;timeyear&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">dates</span><span class="p">)</span>
+    
+        <span class="k">if</span> <span class="n">ntest</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">ntest</span> <span class="o">=</span> <span class="n">init</span><span class="o">+</span><span class="n">size_time_window</span>
+        
+        <span class="n">y_test</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">nstart</span><span class="o">+</span><span class="n">ntrain</span><span class="p">:</span><span class="nb">min</span><span class="p">(</span><span class="n">nstart</span><span class="o">+</span><span class="n">ntrain</span><span class="o">+</span><span class="n">ntest</span><span class="p">,</span><span class="n">n</span><span class="p">)]</span>
+        <span class="n">x_test</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">nstart</span><span class="o">+</span><span class="n">ntrain</span><span class="p">:</span><span class="nb">min</span><span class="p">(</span><span class="n">nstart</span><span class="o">+</span><span class="n">ntrain</span><span class="o">+</span><span class="n">ntest</span><span class="p">,</span><span class="n">n</span><span class="p">)]</span>
+        <span class="n">pet_test</span> <span class="o">=</span> <span class="n">pet</span><span class="p">[</span><span class="n">nstart</span><span class="o">+</span><span class="n">ntrain</span><span class="p">:</span><span class="nb">min</span><span class="p">(</span><span class="n">nstart</span><span class="o">+</span><span class="n">ntrain</span><span class="o">+</span><span class="n">ntest</span><span class="p">,</span><span class="n">n</span><span class="p">)]</span>
+        <span class="n">dates_test</span> <span class="o">=</span> <span class="n">dates</span><span class="p">[</span><span class="n">nstart</span><span class="o">+</span><span class="n">ntrain</span><span class="p">:</span><span class="nb">min</span><span class="p">(</span><span class="n">nstart</span><span class="o">+</span><span class="n">ntrain</span><span class="o">+</span><span class="n">ntest</span><span class="p">,</span><span class="n">n</span><span class="p">)]</span>
+        <span class="n">timeyear_test</span> <span class="o">=</span> <span class="n">timeyear</span><span class="p">[</span><span class="n">nstart</span><span class="o">+</span><span class="n">ntrain</span><span class="p">:</span><span class="nb">min</span><span class="p">(</span><span class="n">nstart</span><span class="o">+</span><span class="n">ntrain</span><span class="o">+</span><span class="n">ntest</span><span class="p">,</span><span class="n">n</span><span class="p">)]</span>
+        <span class="n">y_train</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">nstart</span><span class="p">:</span><span class="n">nstart</span><span class="o">+</span><span class="n">ntrain</span><span class="p">]</span>
+        <span class="n">x_train</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">nstart</span><span class="p">:</span><span class="n">nstart</span><span class="o">+</span><span class="n">ntrain</span><span class="p">]</span>
+        <span class="n">pet_train</span> <span class="o">=</span> <span class="n">pet</span><span class="p">[</span><span class="n">nstart</span><span class="p">:</span><span class="n">nstart</span><span class="o">+</span><span class="n">ntrain</span><span class="p">]</span>
+        <span class="n">dates_train</span> <span class="o">=</span> <span class="n">dates</span><span class="p">[</span><span class="n">nstart</span><span class="p">:</span><span class="n">nstart</span><span class="o">+</span><span class="n">ntrain</span><span class="p">]</span>
+        <span class="n">timeyear_train</span> <span class="o">=</span> <span class="n">timeyear</span><span class="p">[</span><span class="n">nstart</span><span class="p">:</span><span class="n">nstart</span><span class="o">+</span><span class="n">ntrain</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">pet_train</span><span class="p">,</span> <span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">dates_train</span><span class="p">,</span> <span class="n">timeyear_train</span><span class="p">,</span> <span class="n">pet_test</span><span class="p">,</span> <span class="n">x_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">dates_test</span><span class="p">,</span> <span class="n">timeyear_test</span></div>
+
+
+<div class="viewcode-block" id="Dataset.get_design">
+<a class="viewcode-back" href="../../../documentation/GAMCR.dataset.dataset.html#GAMCR.dataset.dataset.Dataset.get_design">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_design</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pet</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">dates</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Compute the matrix that is used in the convolution to get the streamflow values.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        pet : array</span>
+<span class="sd">            Potential evapotranspiration.</span>
+<span class="sd">        x : array</span>
+<span class="sd">            Precipitation time series.</span>
+<span class="sd">        y : array</span>
+<span class="sd">            Streamflow time series.</span>
+<span class="sd">        dates : array</span>
+<span class="sd">            Time series with dates.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">m</span>
+        <span class="n">init</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">init</span>
+        <span class="n">nfeat</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">basis_splines</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        
+        <span class="n">nb_features</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="s1">&#39;pet&#39;</span><span class="p">])</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="s1">&#39;p&#39;</span><span class="p">])</span>
+        <span class="n">ages_max_x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="s1">&#39;p&#39;</span><span class="p">]</span> 
+        <span class="n">ages_max_pet</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="s1">&#39;pet&#39;</span><span class="p">]</span>
+        
+        <span class="n">nfeatures_out_pet_p</span> <span class="o">=</span> <span class="mi">2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">feature_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;precipitation intensity&#39;</span><span class="p">,</span> <span class="s1">&#39;last 2 hours precipitation intensity&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+            <span class="n">nfeatures_out_pet_p</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">feature_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;timeyear&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+            <span class="n">nfeatures_out_pet_p</span> <span class="o">+=</span> <span class="mi">2</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">feature_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;cos yeartime&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">feature_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;sin yeartime&#39;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">ages_max_x</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">feature_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Weighted avg precipitation over the last </span><span class="si">{0}</span><span class="s1"> hours&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">el</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">ages_max_pet</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">feature_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Weighted avg pet over the last </span><span class="si">{0}</span><span class="s1"> hours&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">el</span><span class="p">))</span>
+        <span class="n">nb_features</span> <span class="o">+=</span> <span class="n">nfeatures_out_pet_p</span>
+        <span class="n">Nt</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">Nt</span><span class="p">,</span><span class="n">nb_features</span><span class="p">))</span>
+        <span class="n">J</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">init</span><span class="p">,</span><span class="n">Nt</span><span class="p">):</span>
+            <span class="n">t</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span>
+            <span class="n">arg_perio</span> <span class="o">=</span> <span class="p">(</span><span class="n">dates</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="nb">int</span><span class="p">(</span><span class="n">dates</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nb_features</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">j</span><span class="o">&lt;=</span><span class="mi">1</span><span class="p">:</span>
+                    <span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span>  <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">J</span><span class="p">[</span><span class="n">t</span><span class="o">-</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="n">t</span><span class="p">])</span>
+                <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">feature_names</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;date&#39;</span><span class="p">:</span>
+                    <span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span>  <span class="n">dates</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="n">dates</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">feature_names</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;cos yeartime&#39;</span><span class="p">:</span>
+                    <span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">arg_perio</span><span class="p">)</span>
+                <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">feature_names</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;sin yeartime&#39;</span><span class="p">:</span>
+                    <span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">arg_perio</span><span class="p">)</span>
+                <span class="k">elif</span> <span class="p">(</span><span class="n">j</span><span class="o">&gt;=</span><span class="n">nfeatures_out_pet_p</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">j</span><span class="o">-</span><span class="n">nfeatures_out_pet_p</span><span class="o">&lt;</span><span class="nb">len</span><span class="p">(</span><span class="n">ages_max_x</span><span class="p">)):</span>
+                    <span class="n">ls</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">ages_max_x</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="n">nfeatures_out_pet_p</span><span class="p">]))</span>
+                    <span class="n">weights</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">flip</span><span class="p">(</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="n">ls</span><span class="o">/</span><span class="n">ls</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="p">)</span>
+                    <span class="n">weights</span> <span class="o">/=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">weights</span><span class="p">)</span>
+                    <span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">J</span><span class="p">[</span><span class="n">t</span><span class="o">-</span><span class="n">ages_max_x</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="n">nfeatures_out_pet_p</span><span class="p">]:</span><span class="n">t</span><span class="p">]</span><span class="o">*</span><span class="n">weights</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">jp</span> <span class="o">=</span> <span class="n">j</span><span class="o">-</span><span class="n">nfeatures_out_pet_p</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">ages_max_x</span><span class="p">)</span>
+                    <span class="n">ls</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">ages_max_pet</span><span class="p">[</span><span class="n">jp</span><span class="p">]))</span>
+                    <span class="n">weights</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">flip</span><span class="p">(</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="n">ls</span><span class="o">/</span><span class="n">ls</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="p">)</span>
+                    <span class="n">weights</span> <span class="o">/=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">weights</span><span class="p">)</span>
+                    <span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span>  <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">pet</span><span class="p">[</span><span class="n">t</span><span class="o">-</span><span class="n">ages_max_pet</span><span class="p">[</span><span class="n">jp</span><span class="p">]:</span><span class="n">t</span><span class="p">]</span><span class="o">*</span><span class="n">weights</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">X</span></div>
+
+        
+
+<div class="viewcode-block" id="Dataset.get_GAMdesign">
+<a class="viewcode-back" href="../../../documentation/GAMCR.dataset.dataset.html#GAMCR.dataset.dataset.Dataset.get_GAMdesign">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_GAMdesign</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">J</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Compute the matrix that is used in the convolution to get the streamflow values.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        X : array</span>
+<span class="sd">            Design matrix of the GAM compute from the method &#39;get_design&#39;. X has dimension: number of timepoints x number of features</span>
+<span class="sd">        J : array</span>
+<span class="sd">            Precipitation time series.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">m</span>
+        <span class="n">init</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">init</span>
+        <span class="n">nfeat</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">basis_splines</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">Nt</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">J</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
+        <span class="n">A</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gam</span><span class="o">.</span><span class="n">_modelmat</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+        <span class="n">matJ</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">Nt</span><span class="o">-</span><span class="n">m</span><span class="o">-</span><span class="n">init</span><span class="p">,</span><span class="n">nfeat</span><span class="p">,</span><span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="o">+</span><span class="n">init</span><span class="p">,</span><span class="n">Nt</span><span class="p">):</span>
+            <span class="n">vec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">flip</span><span class="p">(</span><span class="n">J</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="n">m</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
+            <span class="n">mat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">flip</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="n">m</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,:],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+            <span class="c1"># A: nt x nft     basis: L x </span>
+            <span class="n">matJ</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="n">m</span><span class="o">-</span><span class="n">init</span><span class="p">,:,:]</span> <span class="o">=</span>  <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">vec</span><span class="p">[</span><span class="kc">None</span><span class="p">,:,</span><span class="kc">None</span><span class="p">]</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">basis_splines</span><span class="p">[:,:,</span><span class="kc">None</span><span class="p">]</span> <span class="o">*</span> <span class="n">mat</span><span class="p">[</span><span class="kc">None</span><span class="p">,:,:],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">matJ</span></div>
+
+
+<div class="viewcode-block" id="Dataset.load_data">
+<a class="viewcode-back" href="../../../documentation/GAMCR.dataset.dataset.html#GAMCR.dataset.dataset.Dataset.load_data">[docs]</a>
+    <span class="k">def</span> <span class="nf">load_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">save_folder</span><span class="p">,</span> <span class="n">max_files</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">test_mode</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Load the data that has been already proprecessed and saved using one of the &#39;save_batch&#39; type methods.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        save_folder : str</span>
+<span class="sd">            Path of the folder where the data is stored.</span>
+<span class="sd">        max_files : int</span>
+<span class="sd">            Total number of files among the ones saved by the &#39;save_batch&#39; type method to load.</span>
+<span class="sd">        test_mode : bool</span>
+<span class="sd">            If False, the oldest data will be loaded. Otherwise, the more recent one is loaded.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">id_sub_files</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">name</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">save_folder</span><span class="p">)</span> <span class="k">if</span> <span class="p">(</span><span class="s1">&#39;matJ&#39;</span> <span class="ow">in</span> <span class="n">name</span><span class="p">)])</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">))</span>
+
+        <span class="k">if</span> <span class="n">test_mode</span><span class="p">:</span>
+            <span class="n">id_files_2_load</span> <span class="o">=</span> <span class="n">id_sub_files</span><span class="p">[</span><span class="o">-</span><span class="n">max_files</span><span class="p">:]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">id_files_2_load</span> <span class="o">=</span> <span class="n">id_sub_files</span><span class="p">[:</span><span class="n">max_files</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">ite</span><span class="p">,</span> <span class="n">id_file</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">id_files_2_load</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">ite</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+                <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">save_folder</span><span class="p">,</span><span class="s1">&#39;X_</span><span class="si">{0}</span><span class="s1">.npy&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">id_file</span><span class="p">)))</span>
+                <span class="n">matJ</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">save_folder</span><span class="p">,</span><span class="s1">&#39;matJ_</span><span class="si">{0}</span><span class="s1">.npy&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">id_file</span><span class="p">)))</span>
+                <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">save_folder</span><span class="p">,</span><span class="s1">&#39;y_</span><span class="si">{0}</span><span class="s1">.npy&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">id_file</span><span class="p">)))</span>
+                <span class="n">timeyear</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">save_folder</span><span class="p">,</span><span class="s1">&#39;timeyear_</span><span class="si">{0}</span><span class="s1">.npy&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">id_file</span><span class="p">)))</span>
+                <span class="n">dates</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">save_folder</span><span class="p">,</span><span class="s1">&#39;dates_</span><span class="si">{0}</span><span class="s1">.npy&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">id_file</span><span class="p">)),</span> <span class="n">allow_pickle</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">Xtemp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">save_folder</span><span class="p">,</span><span class="s1">&#39;X_</span><span class="si">{0}</span><span class="s1">.npy&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">id_file</span><span class="p">)))</span>
+                <span class="n">matJtemp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">save_folder</span><span class="p">,</span><span class="s1">&#39;matJ_</span><span class="si">{0}</span><span class="s1">.npy&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">id_file</span><span class="p">)))</span>
+                <span class="n">ytemp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">save_folder</span><span class="p">,</span><span class="s1">&#39;y_</span><span class="si">{0}</span><span class="s1">.npy&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">id_file</span><span class="p">)))</span>
+                <span class="n">timeyeartemp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">save_folder</span><span class="p">,</span><span class="s1">&#39;timeyear_</span><span class="si">{0}</span><span class="s1">.npy&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">id_file</span><span class="p">)))</span>
+                <span class="n">datestemp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">save_folder</span><span class="p">,</span><span class="s1">&#39;dates_</span><span class="si">{0}</span><span class="s1">.npy&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">id_file</span><span class="p">)),</span>  <span class="n">allow_pickle</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+                <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">X</span><span class="p">,</span><span class="n">Xtemp</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+                <span class="n">matJ</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">matJ</span><span class="p">,</span><span class="n">matJtemp</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+                <span class="n">timeyear</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">timeyear</span><span class="p">,</span><span class="n">timeyeartemp</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+                <span class="n">dates</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">dates</span><span class="p">,</span><span class="n">datestemp</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+                <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">y</span><span class="p">,</span><span class="n">ytemp</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">X</span><span class="p">,</span> <span class="n">matJ</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">timeyear</span><span class="p">,</span> <span class="n">dates</span></div>
+
+
+<div class="viewcode-block" id="Dataset.compute_spline_basis">
+<a class="viewcode-back" href="../../../documentation/GAMCR.dataset.dataset.html#GAMCR.dataset.dataset.Dataset.compute_spline_basis">[docs]</a>
+    <span class="k">def</span> <span class="nf">compute_spline_basis</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">show_splines</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Compute the basis functions (B-splines) one which we decompose the transfer functions.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        show_splines : bool, optional</span>
+<span class="sd">            If True, a figure showing the basis functions will be produced.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">m</span>
+        <span class="n">knots_ref</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">step</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">while</span> <span class="n">val</span><span class="o">&lt;=</span><span class="n">m</span><span class="p">:</span>
+            <span class="n">knots_ref</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+            <span class="n">val</span> <span class="o">+=</span> <span class="n">step</span>
+            <span class="n">step</span> <span class="o">*=</span> <span class="mi">2</span>
+        
+        <span class="n">nk</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">knots_ref</span><span class="p">)</span>
+        <span class="n">degree</span> <span class="o">=</span> <span class="mi">2</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">nk</span><span class="o">+</span><span class="n">degree</span><span class="o">+</span><span class="mi">1</span>
+        <span class="n">knots</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="nb">min</span><span class="p">(</span><span class="n">knots_ref</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">degree</span><span class="p">),</span><span class="n">knots_ref</span><span class="p">,</span><span class="nb">max</span><span class="p">(</span><span class="n">knots_ref</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">degree</span><span class="p">)))</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+        
+        <span class="c1"># Generate B-spline basis functions</span>
+        <span class="n">basis_functions</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">evaluation_points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">knots</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">knots</span><span class="p">),</span> <span class="n">m</span><span class="p">)</span>
+        
+        <span class="n">basis_values</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+            <span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="n">basis</span> <span class="o">=</span> <span class="n">BSpline</span><span class="p">(</span><span class="n">knots</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">degree</span><span class="p">)</span>
+            <span class="n">basis_values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">basis</span><span class="p">(</span><span class="n">evaluation_points</span><span class="p">))</span>
+            <span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">basis_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">basis_values</span><span class="p">)[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">3</span><span class="p">,:]</span>
+    
+        <span class="k">if</span> <span class="n">show_splines</span><span class="p">:</span>    
+            <span class="c1"># Plot the basis functions</span>
+            
+            
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">basis_values_i</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">basis_values</span><span class="p">):</span>
+                <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">evaluation_points</span><span class="p">,</span> <span class="n">basis_values_i</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Basis </span><span class="si">{</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+            
+            <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;B-spline Basis Functions&#39;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Basis Function Value&#39;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+            
+        <span class="bp">self</span><span class="o">.</span><span class="n">basis_splines</span> <span class="o">=</span> <span class="n">basis_values</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">knots_splines</span> <span class="o">=</span> <span class="n">knots_ref</span></div>
+</div>
+
+    
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Q.Duchemin, M.G.Zanoni, G.Obozinski, J.Kirchner and P.Benettin.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
