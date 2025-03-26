@@ -76,10 +76,13 @@
     "- the average NRF/RRD/weighted RRD over some ensembles (you can stratify either by precipitation intensity, antecendent wetness or by both)\n",
     "- the area, mean, peak and peak lag of the transfer function over different ensembles for the precipitation intensity\n",
     "\n",
+    "## Note that if you want to compare GAMCR with ERRA, you should first launch the script ERRA_experiments.R located in the folder ./experiments/ERRA/\n",
+    "\n",
     "If ERRA data is available, the ensembles will be automatically set to the ones used by ERRA to allow a fair comparison. Otherwise, we can define yourself the ensembles.\n",
     "\n",
     "For ease of use, we save the global (and stratified) NRF/RDD/weighted RRD in a CSV file `NRF_RRD.csv`, located in the `results` folder of the site under study. In this file, the columns named `NRF`, `RRD`, and `weighted_avg_RRD` correspond to the average over all time points. The columns named `NRF_group_{k}`, `RRD_group_{k}`, and `weighted_avg_RRD_group_{k}` correspond to the average over the time points for the group with index k. To determine the precipitation and/or antecedent wetness ranges corresponding to a group, you should open the file `groups.csv`.\n",
     "\n",
+    "### ➡️ Run the Notebook: `figure_real_data_paper.ipynb`\n",
     "\n",
     "A set of tools has already been implemented in GAMCR. By opening the notebook `figures_paper.ipynb` in the `data_and_visualization` folder, you can view the visualizations available using GAMCR."
    ]

@@ -6,7 +6,7 @@ Installation
 Prerequisites
 ~~~~~~~~~~~~~~
 
-GAMCR is a Python package allowing to learn reponse to different treatments of tumor at the subclonal resolution. In the following, we describe the steps to follow to get a correct environment to use our package.
+GAMCR is a Python package allowing to learn the response functions of watersheds to different precipitation events. In the following, we describe the steps to follow to get a correct environment to use our package.
 
 conda prerequisites
 ###################

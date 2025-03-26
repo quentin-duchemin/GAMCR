@@ -24,5 +24,3 @@ Applications of the method
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Once trained on a given site for which at least precipitation and streamflow time series are available, one can predict the transfer function corresponding to any new precipitation event. Therefore, our model paves the way to many application to draw hydroglogical insights on the way different catchments behave. 
-
-In our paper, we propose a specific application of our model to study how the response of real-world watersheds depend on the catchment characteristics.

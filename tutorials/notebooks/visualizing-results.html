@@ -490,11 +490,17 @@ document.write(`
 <section id="2.-Advanced-analysis-of-the-results">
 <h1>2. Advanced analysis of the results<a class="headerlink" href="#2.-Advanced-analysis-of-the-results" title="Link to this heading">#</a></h1>
 <p>By launching the script <code class="docutils literal notranslate"><span class="pre">compute_statistics.py</span></code>, you can compute different information on the learned transfer functions, such as: - the global average NRF/RDD/weighted RRD - the average NRF/RRD/weighted RRD over some ensembles (you can stratify either by precipitation intensity, antecendent wetness or by both) - the area, mean, peak and peak lag of the transfer function over different ensembles for the precipitation intensity</p>
+<section id="Note-that-if-you-want-to-compare-GAMCR-with-ERRA,-you-should-first-launch-the-script-ERRA_experiments.R-located-in-the-folder-./experiments/ERRA/">
+<h2>Note that if you want to compare GAMCR with ERRA, you should first launch the script ERRA_experiments.R located in the folder ./experiments/ERRA/<a class="headerlink" href="#Note-that-if-you-want-to-compare-GAMCR-with-ERRA,-you-should-first-launch-the-script-ERRA_experiments.R-located-in-the-folder-./experiments/ERRA/" title="Link to this heading">#</a></h2>
 <p>If ERRA data is available, the ensembles will be automatically set to the ones used by ERRA to allow a fair comparison. Otherwise, we can define yourself the ensembles.</p>
 <p>For ease of use, we save the global (and stratified) NRF/RDD/weighted RRD in a CSV file <code class="docutils literal notranslate"><span class="pre">NRF_RRD.csv</span></code>, located in the <code class="docutils literal notranslate"><span class="pre">results</span></code> folder of the site under study. In this file, the columns named <code class="docutils literal notranslate"><span class="pre">NRF</span></code>, <code class="docutils literal notranslate"><span class="pre">RRD</span></code>, and <code class="docutils literal notranslate"><span class="pre">weighted_avg_RRD</span></code> correspond to the average over all time points. The columns named <code class="docutils literal notranslate"><span class="pre">NRF_group_{k}</span></code>, <code class="docutils literal notranslate"><span class="pre">RRD_group_{k}</span></code>, and <code class="docutils literal notranslate"><span class="pre">weighted_avg_RRD_group_{k}</span></code> correspond to the average over the time points for the group with index k. To determine the precipitation and/or
 antecedent wetness ranges corresponding to a group, you should open the file <code class="docutils literal notranslate"><span class="pre">groups.csv</span></code>.</p>
+<section id="➡️-Run-the-Notebook:-figure_real_data_paper.ipynb">
+<h3>➡️ Run the Notebook: <code class="docutils literal notranslate"><span class="pre">figure_real_data_paper.ipynb</span></code><a class="headerlink" href="#➡️-Run-the-Notebook:-figure_real_data_paper.ipynb" title="Link to this heading">#</a></h3>
 <p>A set of tools has already been implemented in GAMCR. By opening the notebook <code class="docutils literal notranslate"><span class="pre">figures_paper.ipynb</span></code> in the <code class="docutils literal notranslate"><span class="pre">data_and_visualization</span></code> folder, you can view the visualizations available using GAMCR.</p>
 <p><img alt="Screen shot of NRF averaged over different ranges of precipitation intensity." src="_static/nb_visualization.png" /></p>
+</section>
+</section>
 </section>
 
 
@@ -545,7 +551,13 @@ antecedent wetness ranges corresponding to a group, you should open the file <co
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Visualization of the results of the model</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#1.-Simple-visualization">1. Simple visualization</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#2.-Advanced-analysis-of-the-results">2. Advanced analysis of the results</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#2.-Advanced-analysis-of-the-results">2. Advanced analysis of the results</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Note-that-if-you-want-to-compare-GAMCR-with-ERRA,-you-should-first-launch-the-script-ERRA_experiments.R-located-in-the-folder-./experiments/ERRA/">Note that if you want to compare GAMCR with ERRA, you should first launch the script ERRA_experiments.R located in the folder ./experiments/ERRA/</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#➡️-Run-the-Notebook:-figure_real_data_paper.ipynb">➡️ Run the Notebook: <code class="docutils literal notranslate"><span class="pre">figure_real_data_paper.ipynb</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
   </nav></div>

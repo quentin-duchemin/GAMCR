@@ -11,5 +11,3 @@ Changing the set of possible features used by the GAMs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In the `Dataset` class of the GAMCR package, you can modify the code to use different features that the one we have considered in our paper. For this, you should adapt the method `get_design`. You should give a specific name to your feature and perform the computations needed. Then, we can adapt the set of features you use in the GAMs by changing the attribute *features* when you create a new instance of GAMCR.
-
-Note that currently, GAMCR can 

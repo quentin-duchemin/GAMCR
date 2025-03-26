@@ -41,7 +41,7 @@
     "\n",
     "To properly use the GAMCR package, you should have a folder for each site with the following structure:\n",
     "\n",
-    "- The folder should be named `mysite`.\n",
+    "- You can name the folder as per your preference. For example: `mysite`.\n",
     "- Inside this folder, you should have a file named `data_{mysite}.txt`.  \n",
     "  This file can be created by running the notebook `check_data.ipynb`.\n",
     "- Two subfolders will be created and used by GAMCR:\n",
